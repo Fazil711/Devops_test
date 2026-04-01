@@ -11,7 +11,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
+                echo "Cloning repository from GitHub..."
+                git branch: 'main', 
+                    url: 'https://github.com/Fazil711/Devops_test.git'
             }
         }
 
